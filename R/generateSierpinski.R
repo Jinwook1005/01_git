@@ -33,3 +33,8 @@ sampleVertex <- function(n) {
 stepToVertex <- function(from, to, step.size) {
   from * (1 - step.size) + to * step.size
 }
+install.packages(c("ggplot2", "animation"))
+library(ggplot2)
+library(gganimate)
+library(animation)
+rmarkdown::render("sierpinski.Rmd", output_format = "html_document")
